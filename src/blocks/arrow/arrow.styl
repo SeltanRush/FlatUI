@@ -1,0 +1,59 @@
+.arrow
+	background #fff
+	border-radius 50%
+	width 3.125rem
+	height 3.125rem
+	border 0.1875rem solid _green
+	display inline-block
+	position relative
+
+	&:before
+	&:after
+		content ''
+		position absolute
+		width 1.1rem
+		height 0.25rem
+		background _green 
+		margin auto
+		left 35%
+		bottom 0
+	
+	&:before
+		transform rotate(45deg)
+		transform-origin left
+		top -0.1875rem
+	
+	&:after
+		transform rotate(-45deg)
+		transform-origin left
+		top 0.1875rem
+
+	&_direction_right:before
+	&_direction_right:after
+		transform-origin right
+		left 32%
+		bottom 0.3125rem
+
+	&_direction_right:before
+		top -0.5rem
+
+	&_direction_right:before
+		top 0.5rem	
+	
+	&:hover
+		background _green
+
+		&:before
+		&:after
+			background #fff
+
+	&_disabled
+		background _lightgrey
+		border none
+
+		&:before
+		&:after
+			background #fff
+			
+		&:hover
+			background _lightgrey

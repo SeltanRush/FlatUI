@@ -11,7 +11,7 @@ module.exports = {
 	},
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name]/[name].js"
+    filename: "[name].js"
   },
   module: {
     rules: [
@@ -55,7 +55,7 @@ module.exports = {
 			filename: 'profile.html',
 			chunks: ['profile']
 		}),
-		new ExtractTextPlugin('[name]/[name].css', {allChunks: true}),
+		new ExtractTextPlugin('[name].css', {allChunks: true}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'

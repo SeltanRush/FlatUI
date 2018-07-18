@@ -1,0 +1,49 @@
+.button
+	display inline-block
+	background #fff
+	border 0.06rem solid _green
+	text-transform uppercase
+	color _green
+	width 7.375rem
+	height 2rem
+	font-family Lato, 'sans-serif'
+	font-weight 800
+	font-size 0.75rem
+	cursor pointer
+	border-radius 0.19rem
+	border 0.06rem solid
+	box-shadow 0 0.1875rem 0 0 _darkgreen
+	padding 0
+	text-align center
+	box-sizing border-box
+
+	&:hover
+		color #fff
+		background _green
+		border 0.06rem solid _green
+	
+	&:active
+		box-shadow none
+		transform translateY(0.1875rem)
+	
+	&:focus
+		outline none
+
+	&_size_small
+		width 4.875rem
+		height 1.375rem
+		font-size 0.625rem
+		box-shadow 0 0.125rem 0 0 _darkgreen
+
+	&_color_orange
+		border-color _orange
+		box-shadow 0 0.1875rem 0 0 _darkorange
+		color _orange
+
+		&.button_size_small
+			box-shadow 0 0.125rem 0 0 _darkorange
+
+		&:hover
+			color #fff
+			background _orange
+			border 0.06rem solid _orange

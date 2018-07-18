@@ -1,0 +1,8 @@
+mixin button({text = 'button', size, color, _type = 'button',href}={})
+	- let classString = 'button '
+	- classString += color ? `button_color_${color} ` : ''
+	- classString += size ? `button_size_${size} ` : ''
+	if href	
+		a(href = href class = classString) #{text}
+	else 
+		button(type = _type class = classString) #{text}

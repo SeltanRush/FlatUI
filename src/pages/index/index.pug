@@ -1,7 +1,41 @@
+include ../../blocks/block-title/block-title
+include ../../blocks/button/button
+include ../../blocks/arrow/arrow
+
 doctype html
 html 
 	head
 		meta(charset = "UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		title Main Page
+		title UI-Kit
 	body
+		.wrapper
+			+block-title('standard buttons')
+			.container.container_buttons
+				.container__row
+					+button({size: 'small'})
+					+button({})
+					+button({color: 'orange'})
+					+button({color: 'orange', size: 'small'})
+				.container__row
+					+button({size: 'small'})
+					+button({})
+					+button({color: 'orange'})
+					+button({color: 'orange', size: 'small'})
+				.container__row
+					+button({size: 'small'})
+					+button({})
+					+button({color: 'orange'})
+					+button({color: 'orange', size: 'small'})
+			+block-title('arrow buttons')
+			.container.container_arrows
+				.container__row
+					+arrow({})
+					+arrow({direction: 'right'})
+					+arrow({disabled:'true'})
+					+arrow({direction: 'right', disabled: true})
+					+arrow({})
+					+arrow({direction: 'right'})
+
+				
+				
