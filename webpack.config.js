@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
@@ -18,10 +19,35 @@ module.exports = {
       {
         test: /\.pug/,
         use: 'pug-loader'
-      },
+			},
+			{
+				test: /\.css/,
+				use: ['style-loader','css-loader']
+			},
       {
         test: /\.styl/,
-        use: ExtractTextPlugin.extract('css-loader!stylus-loader?resolve-url-loader')
+        use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								importLoaders: 2,
+								sourceMap: true,
+								minimize: false
+							}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: function() {
+									return [ autoprefixer({browsers: ['last 2 versions']})]
+								}
+							}
+						},
+						'stylus-loader'
+					]
+				})
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.eot$|\.woff2$|\.ttf$|\.wav$|\.mp3$/,
@@ -36,7 +62,7 @@ module.exports = {
             presets: ['env']
           }
         }
-      }
+			}
     ]
   },
   devServer: {

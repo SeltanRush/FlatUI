@@ -16,6 +16,9 @@
 	padding 0
 	text-align center
 	box-sizing border-box
+	user-select none
+	position relative
+	overflow hidden
 
 	&:hover
 		color #fff
@@ -47,3 +50,36 @@
 			color #fff
 			background _orange
 			border 0.06rem solid _orange
+	
+	.ripple
+		position absolute
+		width 0rem
+		height 0rem
+		transform translate(-50%, -50%)
+		background #fff
+		opacity 0
+		border-radius 50%
+		z-index 1
+	
+	.ripple--animate
+		animation ripple 400ms ease-in
+		pointer-events none
+
+	&:not(:hover)
+		.ripple
+			background _green
+	
+	&_color_orange:not(:hover)
+		.ripple
+			background _orange
+
+@keyframes ripple
+	0% 
+		opacity 0
+	25%
+		opacity 0.5
+	100%
+		opacity 0
+		width 200%
+		padding-bottom 200%
+

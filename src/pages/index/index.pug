@@ -1,6 +1,8 @@
 include ../../blocks/block-title/block-title
 include ../../blocks/button/button
 include ../../blocks/arrow/arrow
+include ../../blocks/percentage/percentage
+include ../../blocks/piechart/piechart
 
 doctype html
 html 
@@ -36,6 +38,18 @@ html
 					+arrow({direction: 'right', disabled: true})
 					+arrow({})
 					+arrow({direction: 'right'})
-
+			+block-title('percentages / pie chart')
+			.container.container_percentages
+				.container__row
+					+percentage({percent: 0})
+					+percentage({percent: 38})
+					+percentage({percent: 62})
+					+percentage({percent: 89})
+					+piechart([
+						{ name: 'Grey', color: '#4eb7a8', value: 1000 },
+						{ name: 'Green', color: '#e75735', value: 900},
+						{ name: 'Orange', color: '#e5e5e5', value: 800},
+						{ name: 'Darkgrey', color: '#4f4f4f', value: 250}
+					])
 				
 				

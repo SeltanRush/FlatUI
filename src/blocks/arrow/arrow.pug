@@ -2,4 +2,7 @@ mixin arrow({direction, disabled = false, href = '#'}={})
 	- let classString = 'arrow '
 	- classString += direction ? `arrow_direction_${direction} ` : ''
 	- classString += disabled ? "arrow_disabled"  : ''
-	a(class = classString href = disabled ? '' : href)
+	if disabled
+		div(class = classString)
+	else
+		a(class = classString href = disabled ? '' : href)

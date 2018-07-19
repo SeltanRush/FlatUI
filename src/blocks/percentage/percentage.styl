@@ -1,0 +1,30 @@
+.percentage
+	height 6rem
+	width 6rem
+	transform rotate(-90deg)
+
+	&__circle
+		height 100%
+		width 100%
+		fill transparent
+		stroke-width 0.3125rem
+		stroke-dasharray 16.875rem
+		stroke-dashoffset 16.875rem
+		position relative
+		transition stroke-dashoffset 1.2s ease-out
+
+	&__text
+		display block
+		position absolute
+		width 6rem
+		height 6rem
+		line-height 6rem
+		text-align center
+		margin 0 auto
+		font-weight 200
+		font-size 2.5rem
+		color grey
+		top 0
+	
+	&-box
+		position relative

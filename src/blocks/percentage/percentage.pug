@@ -1,0 +1,5 @@
+mixin percentage({percent = 0,color = '#e75735'}={})
+	.percentage-box
+		svg.percentage(data-color = color)
+			circle.percentage__circle(cx='50%' cy='50%' r='44.8%' stroke=color data-percent = percent)
+		div.percentage__text #{percent}
