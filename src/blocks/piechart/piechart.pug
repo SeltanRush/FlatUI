@@ -1,5 +1,6 @@
 mixin piechart(items = [])
-	canvas.piechart(widht='96' height='96')
-		.piechart__data(hidden)
-			each item in items
-				.piechart__data-item(data-name=item.name data-color=item.color data-value=item.value)
+	.piechart
+		canvas.piechart__display
+			.piechart__data(hidden)
+				each item in items
+					.piechart__data-item(data-name=item.name data-color=item.color data-value=item.value)
