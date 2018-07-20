@@ -1,0 +1,6 @@
+mixin slider({name, color, value = 0,filled, tooltip, pips, max = 100, min = 0,step = 1}={})
+	- let classString = 'slider slider_style '
+	- classString += color ? ` slider_color_${color}` : ''
+	div(class = classString data-float=tooltip data-pips=pips data-fill=fillded data-value=value data-max=max data-min=min)
+		.slider__range
+		

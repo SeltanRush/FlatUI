@@ -6,7 +6,6 @@ for(let i = 0;i < piecharts.length;i++){
 	let piechart = $(piecharts[i]);
 	let ctx = piechart[0].getContext('2d');
 	let dataTags = piechart.children().children();
-	console.log(dataTags);
 	let data = {
 		labels : [],
 		datasets : [

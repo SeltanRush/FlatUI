@@ -13,6 +13,16 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js"
+	},
+	resolve: {
+    modules: [
+      'node_modules',
+      'src',
+      path.resolve(__dirname, 'vendors')
+    ],
+    alias: {
+      vendors: path.resolve(__dirname, 'src/vendors/')
+    }
   },
   module: {
     rules: [

@@ -3,6 +3,7 @@ include ../../blocks/button/button
 include ../../blocks/arrow/arrow
 include ../../blocks/percentage/percentage
 include ../../blocks/piechart/piechart
+include ../../blocks/slider/slider
 
 doctype html
 html 
@@ -51,5 +52,10 @@ html
 						{ name: 'Green', color: '#4eb7a8', value: 900},
 						{ name: 'Grey', color: '#e5e5e5', value: 1000 }
 					])
+			+block-title('sliders')
+			.container.container_sliders
+				.container__row
+					+slider({tooltip: true, value: 40})
+					+slider({tooltip: true,color: 'green', pips: true, filled: true, value: 75})
 				
 				
