@@ -4,8 +4,7 @@
 	border 0.06rem solid _green
 	text-transform uppercase
 	color _green
-	width 7.375rem
-	height 2rem
+	padding 0.5rem 2.1rem
 	font-family Lato, 'sans-serif'
 	font-weight 800
 	font-size 0.75rem
@@ -13,12 +12,20 @@
 	border-radius 0.19rem
 	border 0.06rem solid
 	box-shadow 0 0.1875rem 0 0 _darkgreen
-	padding 0
 	text-align center
 	box-sizing border-box
 	user-select none
 	position relative
 	overflow hidden
+
+	&_bg_filled
+		background _green
+		color #fff
+		border 0.06rem solid _green
+
+		&.button_color_orange
+			background _orange
+			border 0.06rem solid _orange
 
 	&:hover
 		color #fff
@@ -33,8 +40,7 @@
 		outline none
 
 	&_size_small
-		width 4.875rem
-		height 1.375rem
+		padding 0.3rem 1rem
 		font-size 0.625rem
 		box-shadow 0 0.125rem 0 0 _darkgreen
 
@@ -65,7 +71,7 @@
 		animation ripple 400ms ease-in
 		pointer-events none
 
-	&:not(:hover)
+	&:not(:hover):not(&_bg_filled)
 		.ripple
 			background _green
 	

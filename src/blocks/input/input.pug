@@ -1,0 +1,12 @@
+mixin input({name, type, placeholder, pattern, required, tabindex}={})
+	.input
+		input.input__field(
+			name = name
+			type = type
+			placeholder = placeholder
+			pattern = pattern
+			required = required
+			tabindex = tabindex
+		)
+		span.input__validate.input__validate_invalid error
+		span.input__validate.input__validate_valid thanks!

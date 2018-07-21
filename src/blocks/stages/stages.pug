@@ -1,0 +1,12 @@
+mixin stages({count = 2, current = 1} = {})
+	- let lineWidth ='width:' + ((current-0.5)*(100/count)) + '%'
+	if current > count
+		- count = current
+	.stages
+		ul.stages__list
+			- let i = 0
+			- for(;i<current;i++)
+				li.stage.stage_current #{i+1}
+			- for(;i<count;i++)
+				li.stage #{i+1}
+		.stages__line(style = lineWidth)

@@ -1,0 +1,31 @@
+include ../input/input
+include ../textarea/textarea
+include ../button/button
+
+mixin feedback-form({method = 'POST', action = '', enctype}={})
+	form.feedback-form(
+		method = method
+		action = action
+		enctype = enctype
+	)
+		.feedback-form__input
+			+input({
+				name: 'name',
+				placeholder: 'Your Name',
+				required : true
+			})
+		.feedback-form__input
+			+input({
+				name: 'email',
+				placeholder: 'Your Email',
+				pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}',
+				required: true
+			})
+		.feedback-form__textarea
+			+textarea({
+				name: 'message',
+				placeholder: 'Your Message',
+				required: true
+			})
+		.feedback-form__button
+			+button({type: 'submit', text: 'submit',bgFill: true})
