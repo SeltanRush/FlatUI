@@ -1,0 +1,9 @@
+mixin tickbox({name, required}={})
+	.tickbox
+		label.tickbox__label
+			input.tickbox__field(
+				type='checkbox'
+				name = name
+				required = required
+				)
+			span.tickbox__panel

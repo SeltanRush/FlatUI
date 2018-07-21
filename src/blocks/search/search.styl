@@ -1,0 +1,40 @@
+.search
+	border-radius 0.2rem
+	overflow hidden
+	margin-bottom 5rem
+	position relative
+	margin-top 1.75rem
+
+	&__field
+		height 1.75rem
+		width 100%
+		border none
+		background-color _lightgrey
+		font-family: SourceSansPro, Arial, sans-serif
+		font-size: 0.875rem
+		padding 0.5rem 0.8125rem
+		padding-right 2.625rem
+		
+		&:focus
+			outline none
+	
+	&::placeholder
+			color _grey
+
+	&__button
+		position absolute
+		top 0
+		right 0
+		height 1.75rem
+		width 14.5%
+		border none
+		background-color _orange
+		
+		&::before
+			content '\f002'
+			font-family FontAwesome
+			font-size 0.88rem
+			color white
+
+		&:focus
+			outline none

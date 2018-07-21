@@ -12,11 +12,17 @@
 		background-color _lightgrey
 		border-radius 0.2rem
 
+		&:focus
+			outline none
+
 		&:not(:placeholder-shown):required:invalid + .input__validate_invalid
 			opacity 1
+			margin-left 0.4375rem
 
 		&:required:valid ~ .input__validate_valid
 			opacity 1
+			margin-left 0.4375rem
+
 
 		&::placeholder
 			color _grey
@@ -32,7 +38,7 @@
 		position absolute
 		top 0
 		left 100%
-		margin-left 0.4375rem
+		margin-left 3.4375rem
 		font-size 0.625rem
 		font-family Lato, Arial, sans-serif
 		font-weight 800
@@ -40,6 +46,7 @@
 		line-height 1.75rem
 		text-align center
 		letter-spacing 0.05rem
+		transition all 0.2s ease-in
 
 		&_valid
 			background-color _green
@@ -60,6 +67,7 @@
 		
 		&_valid::before
 			border-right-color _green
+			
 
 
 			

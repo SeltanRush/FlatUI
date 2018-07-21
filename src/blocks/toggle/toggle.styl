@@ -1,0 +1,51 @@
+.toggle
+	user-select none
+
+	&__field
+		display none
+
+		&:checked + .toggle__panel
+			transform translateX(0)
+			background-color _green
+
+	&__label
+		cursor pointer
+		width 3.8rem
+		height 1.7rem
+		line-height 1.7rem
+		text-align center
+
+	&__viewport
+		width 3.6875rem
+		height 1.5rem
+		border-radius 6.25rem
+		background-color _lightgrey
+		overflow hidden
+
+
+	&__panel
+		display flex
+		justify-content space-between
+		align-items center
+		width 160%
+		height 100%
+		padding 0 0.5625rem
+		transform translateX(-2.188rem)
+		transition all 0.2s 
+	
+	&__on
+	&__off
+		color #ffffff
+		font-size 0.75rem
+		font-family Lato, sans-serif
+		width 30%
+		text-transform uppercase
+		font-weight 800
+
+	&__circle
+		border-radius 50%
+		background #ffffff
+		width 1.125rem
+		height 1.125rem
+
+	

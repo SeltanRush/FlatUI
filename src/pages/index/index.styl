@@ -9,8 +9,8 @@
 	width 37.125rem
 	display flex
 	flex-wrap wrap
-	justify-content center
-	align-items flex-end
+	justify-content space-between
+	align-items flex-start
 
 	&__row
 		display flex
@@ -18,10 +18,22 @@
 		margin-bottom 1.2rem
 		flex 1 1 100%
 		align-items flex-end
+		width 100%
 			
 		&:last-of-type
 			margin-bottom 0
 
+		&_toggles
+			width 8.3125rem
+			margin 2.0625rem auto
+
+		&_tickboxes
+			width 3.9375rem
+			margin 2.0625rem auto
+
+	&__col
+		width 50%
+		
 	&_buttons
 		margin-top 4.4rem
 		width 29.0625rem
@@ -43,6 +55,9 @@
 	&_stages
 		margin-top 1.475rem
 		margin-bottom 3.2rem
+	
+	&_form-elements
+		margin-top 3.25rem
 
 
 @import '../../blocks/block-title/block-title'
@@ -52,4 +67,7 @@
 @import '../../blocks/piechart/piechart'
 @import '../../blocks/slider/slider'
 @import '../../blocks/feedback-form/feedback-form'	
-@import '../../blocks/stages/stages'	
+@import '../../blocks/stages/stages'
+@import '../../blocks/toggle/toggle'
+@import '../../blocks/tickbox/tickbox'
+@import '../../blocks/search/search'

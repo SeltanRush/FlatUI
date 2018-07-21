@@ -1,0 +1,40 @@
+.tickbox
+	user-select none
+
+	&__label
+		display inline-block
+		width 1.5rem
+		height 1.5rem
+		border-radius 50%
+		cursor pointer
+
+	&__field
+		display none
+
+	&__panel
+		display inline-block
+		width 1.4375rem
+		height 1.4375rem
+		background _lightgrey
+		border-radius 50%
+		position relative
+
+		&::after
+			content '\F00C'
+			font-family FontAwesome
+			font-size 0.8rem
+			position absolute
+			left 23%
+			top 26%
+			color _grey
+
+
+
+
+	&__field:checked + &__panel
+		background _green
+
+		&::after
+			color #fff
+
+	

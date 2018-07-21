@@ -6,6 +6,9 @@ include ../../blocks/piechart/piechart
 include ../../blocks/slider/slider
 include ../../blocks/feedback-form/feedback-form
 include ../../blocks/stages/stages
+include ../../blocks/toggle/toggle
+include ../../blocks/tickbox/tickbox
+include ../../blocks/search/search
 
 doctype html
 html 
@@ -61,10 +64,22 @@ html
 					+slider({tooltip: true,color: 'green', pips: true, filled: true, value: 75})
 			+block-title('stages')
 			.container.container_stages
-					+stages({count:5, current:3})
+					+stages({count: 5, current: 3})
 			+block-title('form elements')
 			.container.container_form-elements
-				.container__row
+				.container__col.container__col_left
 					+feedback-form({})
+					+block-title('search / drop down')
+					+search()
+				.container__col.container__col_right
+					+block-title('toggles')
+					.container__row.container__row_toggles
+						+toggle()
+						+toggle()
+					+block-title('tick boxes')
+					.container__row.container__row_tickboxes
+						+tickbox()
+						+tickbox()
+
 				
 				

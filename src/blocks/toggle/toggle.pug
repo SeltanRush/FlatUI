@@ -1,0 +1,13 @@
+mixin toggle({name, required,}={})
+	.toggle
+		label.toggle__label
+			.toggle__viewport
+				input.toggle__field(
+					type = 'checkbox',
+					name = name,
+					required = required
+					)
+				.toggle__panel
+					.toggle__on on
+					.toggle__circle
+					.toggle__off off

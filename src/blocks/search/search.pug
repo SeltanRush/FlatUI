@@ -1,0 +1,9 @@
+mixin search({method = "GET", action = ''}={})
+	form.search(
+			method = method
+			action = action
+		)
+		.search__input
+			input.search__field(type="text" name="search" placeholder="Search" autocomplete="off")
+			button.search__button(type="submit")
+
