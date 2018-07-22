@@ -1,0 +1,13 @@
+include ../button/button
+
+mixin event({day, mounth, title, text, href='#'}={})
+	.event
+		.event__image
+		.event__info
+			.event__data 
+				.event__day #{day}
+				.event__mounth #{mounth}
+			.event__title #{title}
+			.event__text #{text}
+			.event__button
+				+button({href:href, text:'add to calendar'})

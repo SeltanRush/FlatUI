@@ -1,0 +1,10 @@
+mixin select({name, multiple, require, placeholder = 'Choose An Option', options = []}={})
+	.select
+		select.select__field(
+			name = name
+			multiple = multiple
+			require = require	
+		)
+			option.select__option_placeholder(selected='selected') #{placeholder}
+			each item in options
+				option.select__option(value=item.value) #{item.name}

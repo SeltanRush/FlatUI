@@ -1,0 +1,14 @@
+include ../avatar/avatar
+
+mixin profile({name, src, job,color, hrefFB='#', hrefTwitter='#', hrefDribbble ='#'}={})
+	- let classString = color ? `profile_color_${color}` : ''
+	.profile(class=classString)
+		.profile__avatar
+			+avatar({src: src, name: name})
+		.profile__info
+			.profile__name #{name}
+			.profile__job #{job}
+			.profile__social
+				a.profile__link.profile__link_fb(href = hrefFB)
+				a.profile__link.profile__link_twitter(href = hrefTwitter)
+				a.profile__link.profile__link_drible(href = hrefDribbble)

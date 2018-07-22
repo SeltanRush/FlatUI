@@ -9,6 +9,10 @@ include ../../blocks/stages/stages
 include ../../blocks/toggle/toggle
 include ../../blocks/tickbox/tickbox
 include ../../blocks/search/search
+include ../../blocks/select/select
+include ../../blocks/profile/profile
+include ../../blocks/news/news
+include ../../blocks/event/event
 
 doctype html
 html 
@@ -71,6 +75,11 @@ html
 					+feedback-form({})
 					+block-title('search / drop down')
 					+search()
+					+select({options: [
+						{ name: 'First Option', value: 1},
+						{ name: 'Second Option', value: 2},
+						{ name: 'Third Option', value: 3},
+					]})
 				.container__col.container__col_right
 					+block-title('toggles')
 					.container__row.container__row_toggles
@@ -80,6 +89,34 @@ html
 					.container__row.container__row_tickboxes
 						+tickbox()
 						+tickbox()
+					+block-title('user profile')
+					.container__row.container__row_profile
+						+profile({
+							src:'images/profile1.png',
+							name: 'Jonh Smith',
+							job: 'ux designer'
+							})
+					.container__row.container__row_profile
+						+profile({
+							src:'images/profile2.png',
+							name: 'Sarah Brown',
+							job: 'developer',
+							color: 'green'
+							})
+			+block-title('news & events')
+			.container.container_news
+				.container__row
+					+news({
+						title:	"It's all going downhill",
+						date: '24 august 2013',
+						text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloremque iste nulla ullam ab nostrum labore quisquam eius.' })
+					+event({day: '24',
+						mounth:'Aug',
+						title:'This is the title',
+						text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+						})
+
+
 
 				
 				

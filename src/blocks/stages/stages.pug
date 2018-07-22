@@ -1,13 +1,7 @@
 mixin stages({count = 2, current = 1} = {})
 	if current > count
 		- count = current
-	- let lineWidth =(current-0.44)*(100/count)
-	if current == 2
-		- let lineWidth =(current-0.8)*(100/count)
-	if count == current
-		- lineWidth = current*(100/count)
-	if current == 1
-		- lineWidth = 0
+	- let lineWidth =(current-1)*(100/(count-1))
 	.stages
 		ul.stages__list
 			- let i = 0

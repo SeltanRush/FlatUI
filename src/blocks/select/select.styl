@@ -1,0 +1,46 @@
+.select
+	display block
+	margin-bottom 5rem
+	border-radius 0.2rem
+	overflow hidden
+	position relative
+	width 100%
+	height 1.75rem
+
+	&:focus
+		outline none
+
+	&__field
+		border none 
+		background _lightgrey
+		width 100%
+		height 1.75rem
+		font-family: SourceSansPro, Arial, sans-serif
+		font-size: 0.875rem
+		padding 0rem 0.8125rem
+		padding-right 2.625rem
+		color darken(_grey,10)
+	
+
+	&::before
+		content '\f107'
+		font-family FontAwesome
+		position absolute
+		color #ffffff
+		height 100%
+		line-height 1.75rem
+		width 14.5%
+		right 0
+		text-align center
+		background-color _green
+		font-size 1.4rem
+		pointer-events none
+
+		&:focus
+			outline none
+	
+	&__option
+
+		&_placeholder
+			color _grey
+
