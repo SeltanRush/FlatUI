@@ -1,0 +1,147 @@
+.calendar
+	width 279px
+	border none
+	margin-top 1.8125rem
+	border-radius 0.25rem
+	overflow hidden
+
+	&__header
+		height 6.8125rem
+		width 100%
+		background-color _orange
+		text-align center
+		color #ffffff
+		font-size 5rem
+		line-height 6.8125rem
+		font-weight 200
+
+	& .ui-datepicker-inline
+		width 100%
+		padding 0
+		height 19.9375rem
+		border none !important
+		border-radius 0 !important
+		margin 0
+
+
+		& .ui-datepicker-header
+			padding 0
+			background-color _semiDarkorange
+			height 2.6875rem
+			line-height 2.6875rem
+			border none
+			border-radius 0
+
+			& .ui-datepicker-next
+				height 2rem
+				width 2rem
+				margin 0
+				border-radius 0
+				top 0%
+				right 0
+				bottom 0
+				height 100%
+
+				&::before
+					content '\f054'
+					font-family FontAwesome
+					position absolute
+					color #ffffff
+					font-size 0.9rem
+					line-height 0.9rem
+					top 35%
+					left 30%
+
+				&:hover
+					background inherit
+					border none
+			
+			& .ui-datepicker-prev
+				height 2rem
+				width 2rem
+				margin 0
+				border-radius 0
+				top 0%
+				left 0
+				right 0
+				bottom 0
+				height 100%
+
+				&::before
+					content '\f053'
+					font-family FontAwesome
+					position absolute
+					color #ffffff
+					font-size 0.9rem
+					line-height 0.9rem
+					top 35%
+					left 30%
+
+				&:hover
+					background inherit
+					border none
+
+			& .ui-icon
+				display none
+
+			& .ui-datepicker-title
+				font-family Lato, sans-serif
+				font-weight 200
+				font-size 1.5rem
+				color #fff
+
+				& .ui-datepicker-year
+					display none
+
+		& th 
+			padding 0
+			color #ffffff
+			height 1.6875rem
+			width calc(100%/7)
+			background-color _orange
+			font-size 0.5625rem
+			font-family Lato, sans-serif
+			font-weight 800
+
+		& td
+			border none
+			outline none
+			width 2.4375rem
+			height 2.4375rem
+			padding none
+
+		&	.ui-state-default
+				border none 
+				padding 0
+				height 100%
+				width 100%
+				text-align center
+				line-height 2.4375rem
+				color _grey
+				background-color _semiLightgrey
+				opacity 1
+				font-size 1.25rem
+				font-family SourceSansPro, sans-serif
+
+		& .ui-priority-secondary
+			color #fff
+
+		& .ui-datepicker-buttonpane
+			margin 0
+			border none
+			padding 0
+
+		& .ui-datepicker-calendar
+			margin 0
+
+		& .ui-datepicker-current
+			margin 0
+			background-color _lightgrey
+			font-size 13px
+			font-weight 800
+			font-family Lato, sans-serif
+			text-transform uppercase
+			padding 0 19px
+			text-align left
+			color _grey
+

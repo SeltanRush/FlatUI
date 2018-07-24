@@ -13,6 +13,8 @@ include ../../blocks/select/select
 include ../../blocks/profile/profile
 include ../../blocks/news/news
 include ../../blocks/event/event
+include ../../blocks/map/map
+include ../../blocks/calendar/calendar
 
 doctype html
 html 
@@ -92,13 +94,13 @@ html
 					+block-title('user profile')
 					.container__row.container__row_profile
 						+profile({
-							src:'images/profile1.png',
+							src:'./images/profile1.png',
 							name: 'Jonh Smith',
 							job: 'ux designer'
 							})
 					.container__row.container__row_profile
 						+profile({
-							src:'images/profile2.png',
+							src:'./images/profile2.png',
 							name: 'Sarah Brown',
 							job: 'developer',
 							color: 'green'
@@ -115,6 +117,20 @@ html
 						title:'This is the title',
 						text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
 						})
+			+block-title('location')
+			.container.container_map
+				+map({info: {
+					text: "Meet us!",
+					address: 'Tomsk F.Lytkina18'
+				}})
+			.container.container__calenmess
+				.container__col.container__col_left
+					+block-title('calendar')
+					+calendar()
+				.container__col.container__col_right
+					+block-title('messaging')
+					
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 
 
 

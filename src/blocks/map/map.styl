@@ -1,0 +1,56 @@
+.map
+	border-radius 0.1875rem
+	overflow hidden
+
+	&__viewport
+		width 37.125rem
+		height 12.75rem
+		background-color _lightgrey
+
+	&__info
+		width 37.125rem
+		height 4.375rem
+		background-color _orange
+		color #fff
+		padding 1rem 1.7rem
+
+	&__text
+		float left
+		font-weight 200
+		font-size 1.875rem
+		line-height 1.875rem
+
+	&__address
+		margin-left 1.625rem
+		float left
+		width 135px
+		font-weight 800
+		font-size 0.7813rem
+		word-wrap wrap
+		text-transform uppercase
+		letter-spacing 0.05rem
+
+	&__controls
+		float right
+		width 4.375rem
+		display flex
+		justify-content space-between
+		align-items center
+		height 100%
+
+	&__button
+		background-color inherit 
+		height 1.75rem
+		width 1.75rem
+		border none
+		padding 0
+		cursor pointer
+		background-size 105%
+
+		&_mark
+			background-image url('images/mark.png')
+			background-size 100% 100%
+			width 1.4rem
+
+		&_crosshair
+			background-image url('images/crosshair.png')

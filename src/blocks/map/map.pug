@@ -1,0 +1,12 @@
+mixin map({center = [56.45179867922813,84.97489183327833], mark, zoom = 16,info = {}}={})
+	if !mark
+		- mark = center
+	.map
+		.map__viewport(id='map' data-center=center data-mark=mark data-zoom=zoom)
+		.map__info
+			.map__text #{info.text}
+			.map__address #{info.address}
+			.map__controls
+
+				.map__button.map__button_crosshair
+				.map__button.map__button_mark

@@ -44,6 +44,7 @@ body {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
 }
 *:focus {
   outline: none;
@@ -131,6 +132,10 @@ body {
 }
 .container_news {
   margin-top: 2.25rem;
+  margin-bottom: 3.1875rem;
+}
+.container_map {
+  margin-top: 2.125rem;
   margin-bottom: 3.1875rem;
 }
 .block-title {
@@ -916,7 +921,7 @@ body {
 }
 .news {
   height: 13.25rem;
-  border-radius: 0.1875rem;
+  border-radius: 0.25rem;
   overflow: hidden;
   font-size: 0.6875rem;
   width: 18rem;
@@ -953,7 +958,7 @@ body {
 }
 .event {
   height: 13.25rem;
-  border-radius: 0.1875rem;
+  border-radius: 0.25rem;
   overflow: hidden;
   font-size: 0.6875rem;
   width: 18rem;
@@ -1003,4 +1008,213 @@ body {
 }
 .event__button .button {
   padding: 0.3rem 0.75rem;
+}
+.map {
+  border-radius: 0.1875rem;
+  overflow: hidden;
+}
+.map__viewport {
+  width: 37.125rem;
+  height: 12.75rem;
+  background-color: #e5e5e5;
+}
+.map__info {
+  width: 37.125rem;
+  height: 4.375rem;
+  background-color: #e75735;
+  color: #fff;
+  padding: 1rem 1.7rem;
+}
+.map__text {
+  float: left;
+  font-weight: 200;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+}
+.map__address {
+  margin-left: 1.625rem;
+  float: left;
+  width: 135px;
+  font-weight: 800;
+  font-size: 0.7813rem;
+  word-wrap: wrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+.map__controls {
+  float: right;
+  width: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.map__button {
+  background-color: inherit;
+  height: 1.75rem;
+  width: 1.75rem;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-size: 105%;
+}
+.map__button_mark {
+  background-image: url(components/src/pages/index/images/mark.png);
+  background-size: 100% 100%;
+  width: 1.4rem;
+}
+.map__button_crosshair {
+  background-image: url(components/src/pages/index/images/crosshair.png);
+}
+.calendar {
+  width: 279px;
+  border: none;
+  margin-top: 1.8125rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.calendar__header {
+  height: 6.8125rem;
+  width: 100%;
+  background-color: #e75735;
+  text-align: center;
+  color: #fff;
+  font-size: 5rem;
+  line-height: 6.8125rem;
+  font-weight: 200;
+}
+.calendar .ui-datepicker-inline {
+  width: 100%;
+  padding: 0;
+  height: 19.9375rem;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header {
+  padding: 0;
+  background-color: #d54c2c;
+  height: 2.6875rem;
+  line-height: 2.6875rem;
+  border: none;
+  border-radius: 0;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-next {
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  border-radius: 0;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-next::before {
+  content: '\F054';
+  font-family: FontAwesome;
+  position: absolute;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  top: 35%;
+  left: 30%;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-next:hover {
+  background: inherit;
+  border: none;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-prev {
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  border-radius: 0;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-prev::before {
+  content: '\F053';
+  font-family: FontAwesome;
+  position: absolute;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  top: 35%;
+  left: 30%;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-prev:hover {
+  background: inherit;
+  border: none;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-icon {
+  display: none;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-title {
+  font-family: Lato, sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-header .ui-datepicker-title .ui-datepicker-year {
+  display: none;
+}
+.calendar .ui-datepicker-inline th {
+  padding: 0;
+  color: #fff;
+  height: 1.6875rem;
+  width: calc(100% / 7);
+  background-color: #e75735;
+  font-size: 0.5625rem;
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+}
+.calendar .ui-datepicker-inline td {
+  border: none;
+  outline: none;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  padding: none;
+}
+.calendar .ui-datepicker-inline .ui-state-default {
+  border: none;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 2.4375rem;
+  color: #9d9d9d;
+  background-color: #f2f2f2;
+  opacity: 1;
+  font-size: 1.25rem;
+  font-family: SourceSansPro, sans-serif;
+}
+.calendar .ui-datepicker-inline .ui-priority-secondary {
+  color: #fff;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-buttonpane {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-calendar {
+  margin: 0;
+}
+.calendar .ui-datepicker-inline .ui-datepicker-current {
+  margin: 0;
+  background-color: #e5e5e5;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  padding: 0 19px;
+  text-align: left;
+  color: #9d9d9d;
 }
