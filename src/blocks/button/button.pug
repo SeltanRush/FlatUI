@@ -1,8 +1,10 @@
-mixin button({text = 'button', size, color, type = 'button',href,bgFill = false}={})
+mixin button({text = 'button', size, color, type = 'button',href,bgFill = false, width}={})
 	- let classString = 'button '
 	- classString += color ? `button_color_${color} ` : ''
 	- classString += size ? `button_size_${size} ` : ''
 	- classString += bgFill ? `button_bg_filled ` : ''
+	- classString += bgFill ? `button_bg_filled ` : ''
+	- classString += width == 'full' ? `button_width_full ` : ''
 	if href	
 		a(href = href class = classString) #{text}
 			.ripple

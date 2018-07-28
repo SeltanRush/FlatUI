@@ -15,6 +15,7 @@ include ../../blocks/news/news
 include ../../blocks/event/event
 include ../../blocks/map/map
 include ../../blocks/calendar/calendar
+include ../../blocks/messanger/messanger
 
 doctype html
 html 
@@ -129,6 +130,8 @@ html
 					+calendar()
 				.container__col.container__col_right
 					+block-title('messaging')
+					+messanger({userAvatarSrc:'./images/profile2.png',
+							userName: 'Sarah Brown'})
 					
 		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 

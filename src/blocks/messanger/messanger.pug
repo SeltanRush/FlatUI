@@ -1,0 +1,18 @@
+include ../button/button
+include ../avatar/avatar
+
+mixin messanger({userId, userName, userAvatarSrc})
+	.messanger
+		.messanger__header #{userName}
+			.messanger__avatar
+				+avatar({name: userName, src: userAvatarSrc})
+		.messanger__main
+			.messanger__controls
+				.messanger__control.messanger__control_message
+				.messanger__control.messanger__control_photo
+			.messanger__viewport
+				.messanger__message Hey! So are we cool to meet at the art gallery? Say 8pm
+			.messanger__input(contentEditable=true)
+			.messanger__button
+				+button({text: 'reply', bgFill: true, width: 'full'})
+

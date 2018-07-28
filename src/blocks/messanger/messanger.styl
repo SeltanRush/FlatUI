@@ -1,0 +1,93 @@
+.messanger
+	overflow hidden
+	width 17.4375rem
+	margin-top 1.8125rem
+	border-radius 0.25rem
+	margin-left 1.1rem
+
+	&__header 
+		height 7.25rem
+		background-image linear-gradient(to bottom, _green 70.7%, _semiDarkgreen 70.7%)
+		position relative
+		line-height 5.125rem
+		color #ffffff
+		text-align center
+		font-size 2.125rem
+		font-weight 200
+	
+	&__avatar
+		position absolute
+		left 35%
+		top 57%
+
+	&__main
+		width 100%
+		background-color: _semiLightgrey
+		padding 1.75rem 1.375rem
+
+	&__controls
+		width 100%
+		display flex
+		justify-content space-between
+		margin-bottom 1.75rem
+
+	&__control
+		position relative
+		cursor pointer
+
+		&::before
+			font-family FontAwesome 
+			display block
+			font-size 1.3rem
+			color _grey
+	
+		&_message::before
+			content '\f075'
+			transform scale(-1, 1)
+
+		&_photo::before
+			content '\f030'
+
+	&__input
+		width 100%
+		min-height 5.5rem
+		height auto
+		border 0.1875rem solid #fff
+		margin-bottom 0.9375rem
+		background-color _lightgrey
+		border-radius 6px
+		color _grey
+		font-weight bold
+		padding 1.125rem 1.25rem
+		font-size 0.7813rem
+
+	&__viewport
+		width 100%
+		min-height 4rem
+		height auto
+		margin-bottom 1.0625rem
+
+	&__message
+		width 100%
+		min-height 3rem
+		height auto
+		background-color #fff
+		border-radius 6px
+		color _grey
+		font-weight bold
+		padding 1.125rem 1.25rem
+		font-size 0.7813rem
+		position relative
+
+		&::before
+			content ''
+			display block
+			border 0.4375rem solid #ffffff
+			border-color transparent transparent #fff transparent
+			position absolute
+			top -0.875rem
+			left 48%
+			margin auto
+		
+
+		
