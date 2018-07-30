@@ -1,0 +1,40 @@
+include ../button/button
+include ../input/input
+include ../block-title/block-title
+include ../tickbox/tickbox
+
+mixin signin()
+	.signin
+		+block-title('sign in')
+		form.signin__form(method="GET")
+			.signin__input
+				+input({
+					name: 'login',
+					placeholder: 'Your Login'
+				})
+			.signin__input
+				+input({
+					name: 'password',
+					placeholder: 'Your Password',
+					type: 'password'
+				})
+			.signin__check
+				.signin__remember
+					.signin__text Remember me
+					+tickbox
+				a.signin__forgot(href="#")
+					.signin__text forgot password
+			.signin__buttons
+				+button({
+					text: 'sign up',
+					color: 'orange',
+					bgFill: true,
+					href
+				})
+				+button({
+					text: 'sign in',
+					bgFill: true,
+					type: 'submit'
+				})
+
+		

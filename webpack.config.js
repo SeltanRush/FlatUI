@@ -7,8 +7,9 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-		index: './src/pages/index/index.js',
-		profile: './src/pages/profile/profile.js'
+		autorization: './src/pages/autorization/autorization.js',
+		profile: './src/pages/profile/profile.js',
+		uikit: './src/pages/uikit/uikit.js'
 	},
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -82,14 +83,19 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-			template: './src/pages/index/index.pug',
-			filename: 'index.html',
-			chunks: ['index']
+			template: './src/pages/autorization/autorization.pug',
+			filename: 'autorization.html',
+			chunks: ['autorization']
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/pages/profile/profile.pug',
 			filename: 'profile.html',
 			chunks: ['profile']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/uikit/uikit.pug',
+			filename: 'uikit.html',
+			chunks: ['uikit']
 		}),
 		new ExtractTextPlugin('[name].css', {allChunks: true}),
 		new webpack.ProvidePlugin({

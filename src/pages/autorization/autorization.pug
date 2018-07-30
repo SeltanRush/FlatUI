@@ -1,0 +1,24 @@
+include ../../blocks/signin/signin
+include ../../blocks/logo/logo
+include ../../blocks/search/search
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Sign in
+	body
+		header.header
+			.wrapper
+				.container.container_header
+					+logo()
+					.header__search
+						+search()
+		main.main
+			.wrapper
+				.container.container_main
+					+signin()
+		footer.footer
+			.wrapper
+				.container.container_footer

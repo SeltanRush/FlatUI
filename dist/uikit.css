@@ -40,6 +40,7 @@ html {
 }
 body {
   margin: 0;
+  height: 100%;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -199,6 +200,7 @@ body {
 .button_bg_filled.button_color_orange {
   background: #e75735;
   border: 0.06rem solid #e75735;
+  color: #fff;
 }
 .button:hover {
   color: #fff;
@@ -699,6 +701,8 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 .tickbox__label {
   display: inline-block;
@@ -723,8 +727,8 @@ body {
   font-family: FontAwesome;
   font-size: 0.8rem;
   position: absolute;
-  left: 23%;
-  top: 26%;
+  left: 21%;
+  top: 23%;
   color: #9d9d9d;
 }
 .tickbox__field:checked + .tickbox__panel {
@@ -950,7 +954,9 @@ body {
   height: 100%;
   float: left;
   width: 33%;
-  background-image: url(components/src/pages/index/images/news.png);
+  background-image: url(components/src/pages/uikit/images/news.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .news__info {
   height: 100%;
@@ -987,7 +993,9 @@ body {
   height: 100%;
   float: left;
   width: 33%;
-  background-image: url(components/src/pages/index/images/event.png);
+  background-image: url(components/src/pages/uikit/images/event.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .event__info {
   height: 100%;
@@ -1085,12 +1093,12 @@ body {
   background-size: 105%;
 }
 .map__button_mark {
-  background-image: url(components/src/pages/index/images/mark.png);
+  background-image: url(components/src/pages/uikit/images/mark.png);
   background-size: 100% 100%;
   width: 1.4rem;
 }
 .map__button_crosshair {
-  background-image: url(components/src/pages/index/images/crosshair.png);
+  background-image: url(components/src/pages/uikit/images/crosshair.png);
 }
 .calendar {
   width: 17.4375rem;
