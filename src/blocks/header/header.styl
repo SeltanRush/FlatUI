@@ -1,0 +1,31 @@
+@import '../wrapper/wrapper'
+@import '../search/search'
+@import '../logo/logo'
+
+.header
+	background-color _green
+	width 100%
+	height 12%
+	border-bottom 0.3rem solid yellowgreen
+	@media screen and (max-width: 705px)
+		height 20%
+	z-index 3
+	position fixed
+	top 0
+
+	&__search
+		width 15rem
+
+	&__container
+		width 100%
+		height 100%
+		display flex
+		align-items center
+		flex-wrap wrap
+		justify-content space-between
+		@media screen and (max-width: 705px)
+			justify-content center
+
+	
+
+	

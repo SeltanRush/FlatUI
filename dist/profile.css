@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Lato';
+  src: url(components/src/fonts/lato-black.eot);
+  src: url(components/src/fonts/lato-black.eot) format('embedded-opentype'), url(components/src/fonts/lato-black.woff2) format('woff2'), url(components/src/fonts/lato-black.woff) format('woff'), url(components/src/fonts/lato-black.ttf) format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url(components/src/fonts/lato-bold.eot);
+  src: url(components/src/fonts/lato-bold.eot) format('embedded-opentype'), url(components/src/fonts/lato-bold.woff2) format('woff2'), url(components/src/fonts/lato-bold.woff) format('woff'), url(components/src/fonts/lato-bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url(components/src/fonts/lato-light.eot);
+  src: url(components/src/fonts/lato-light.eot) format('embedded-opentype'), url(components/src/fonts/lato-light.woff2) format('woff2'), url(components/src/fonts/lato-light.woff) format('woff'), url(components/src/fonts/lato-light.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url(components/src/fonts/lato-regular.eot);
+  src: url(components/src/fonts/lato-regular.eot) format('embedded-opentype'), url(components/src/fonts/lato-regular.woff2) format('woff2'), url(components/src/fonts/lato-regular.woff) format('woff'), url(components/src/fonts/lato-regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url(components/src/fonts/sourcesanspro-regular.eot);
+  src: url(components/src/fonts/sourcesanspro-regular.eot) format('embedded-opentype'), url(components/src/fonts/sourcesanspro-regular.woff2) format('woff2'), url(components/src/fonts/sourcesanspro-regular.woff) format('woff'), url(components/src/fonts/sourcesanspro-regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+@media screen and (max-width: 490px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 368px) {
+  html {
+    font-size: 10px;
+  }
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+*:focus {
+  outline: none;
+}
+.main {
+  min-height: 78%;
+  height: auto;
+  width: 100%;
+  background-color: #e5e5e5;
+  margin: 0 auto;
+}
+.main__container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.wrapper {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.search {
+  border-radius: 0.2rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-top: 1.75rem;
+}
+.search__field {
+  height: 1.75rem;
+  width: 100%;
+  border: none;
+  background-color: #e5e5e5;
+  font-family: SourceSansPro, Arial, sans-serif;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.8125rem;
+  padding-right: 2.625rem;
+}
+.search__field:focus {
+  outline: none;
+}
+.search::-webkit-input-placeholder {
+  color: #9d9d9d;
+}
+.search:-ms-input-placeholder {
+  color: #9d9d9d;
+}
+.search::-ms-input-placeholder {
+  color: #9d9d9d;
+}
+.search::placeholder {
+  color: #9d9d9d;
+}
+.search__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1.75rem;
+  width: 14.5%;
+  border: none;
+  background-color: #e75735;
+}
+.search__button::before {
+  content: '\F002';
+  font-family: FontAwesome;
+  font-size: 0.88rem;
+  color: #fff;
+}
+.search__button:focus {
+  outline: none;
+}
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 4.5rem;
+}
+.logo__icon {
+  height: 4.5rem;
+  width: 4rem;
+  background: url(components/src/images/beard.svg) no-repeat;
+}
+.logo__text {
+  padding-left: 2rem;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #9acd32;
+}
+.header {
+  background-color: #4eb7a8;
+  width: 100%;
+  height: 12%;
+  border-bottom: 0.3rem solid #9acd32;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+}
+@media screen and (max-width: 705px) {
+  .header {
+    height: 20%;
+  }
+}
+.header__search {
+  width: 15rem;
+}
+.header__container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 705px) {
+  .header__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.wrapper {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer {
+  width: 100%;
+  background-color: #9d9d9d;
+  height: 10%;
+  border-top: 0.3rem solid #9acd32;
+}

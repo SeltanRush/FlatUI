@@ -1,0 +1,10 @@
+include ../logo/logo
+include ../search/search
+
+mixin header()
+		header.header
+			.wrapper
+				.header__container
+					+logo()
+					.header__search
+						+search()

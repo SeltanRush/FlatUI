@@ -1,0 +1,64 @@
+include ../stages/stages
+include ../input/input
+include ../block-title/block-title
+include ../textarea/textarea
+include ../button/button
+include ../toggle/toggle
+
+mixin signup()
+	.signup
+		+block-title('Sign up')
+		form.signup__form(method="POST")
+			.signup__stages
+				+stages({count: 4, current: 3})
+			.signup__input
+				+input({
+					name: 'login',
+					placeholder: 'Your Login',
+					pattern: '^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$',
+					required: true
+				})
+			.signup__input
+				+input({
+					name: 'name',
+					placeholder: 'Your Name',
+					pattern: '^[а-яА-ЯёЁa-zA-Z0-9]+$',
+					required: true
+				})
+			.signup__input
+				+input({
+					name: 'email',
+					placeholder: 'Your Email',
+					pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}',
+					required: true
+				})
+			.signup__input
+				+input({
+					name: 'password',
+					placeholder: 'Your Password',
+					pattern: '(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$',
+					required: true
+				})
+			.signup__input
+				+input({
+					name: 'confirmPassword',
+					placeholder: 'Confirm password',
+					pattern: '(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$',
+					required: true
+				})
+			.signup__input
+				+input({
+					name: 'phone',
+					placeholder: 'Your Phone Number',
+					pattern: '[0-9]{11,13}',
+					required: true
+				})
+			.signup__textarea
+				+textarea({name: 'about',placeholder: 'About You'})
+			.signup__toggles
+				.signup__toggle.signup__toggle_notify
+					+toggle({name: 'notify'})
+				.signup__text recive notifycations
+			.signup__submit
+				+button({type: 'submit', text: 'sign up',href: 'profile.html'})
+			

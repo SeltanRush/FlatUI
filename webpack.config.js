@@ -9,7 +9,8 @@ module.exports = {
   entry: {
 		autorization: './src/pages/autorization/autorization.js',
 		profile: './src/pages/profile/profile.js',
-		uikit: './src/pages/uikit/uikit.js'
+		uikit: './src/pages/uikit/uikit.js',
+		registration: './src/pages/registration/registration.js'
 	},
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -96,6 +97,11 @@ module.exports = {
 			template: './src/pages/uikit/uikit.pug',
 			filename: 'uikit.html',
 			chunks: ['uikit']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/registration/registration.pug',
+			filename: 'registration.html',
+			chunks: ['registration']
 		}),
 		new ExtractTextPlugin('[name].css', {allChunks: true}),
 		new webpack.ProvidePlugin({

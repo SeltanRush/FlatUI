@@ -1,6 +1,6 @@
 include ../../blocks/signin/signin
-include ../../blocks/logo/logo
-include ../../blocks/search/search
+include ../../blocks/header/header
+include ../../blocks/footer/footer
 
 doctype html
 html
@@ -9,16 +9,9 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title Sign in
 	body
-		header.header
-			.wrapper
-				.container.container_header
-					+logo()
-					.header__search
-						+search()
+		+header()
 		main.main
 			.wrapper
-				.container.container_main
+				.main__container
 					+signin()
-		footer.footer
-			.wrapper
-				.container.container_footer
+		+footer()

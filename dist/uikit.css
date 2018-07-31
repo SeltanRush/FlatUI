@@ -38,6 +38,16 @@ html {
   font-size: 16px;
   height: 100%;
 }
+@media screen and (max-width: 490px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 368px) {
+  html {
+    font-size: 10px;
+  }
+}
 body {
   margin: 0;
   height: 100%;
@@ -593,7 +603,7 @@ body {
   height: 0.3125rem;
   background-color: #e75735;
   top: 44%;
-  z-index: -1;
+  z-index: 1;
 }
 .stages__list {
   display: -webkit-box;
@@ -616,7 +626,6 @@ body {
   height: 0.3125rem;
   background-color: #e5e5e5;
   top: 44%;
-  z-index: -2;
 }
 .stages__list .stage {
   width: 1.8125rem;
@@ -630,6 +639,7 @@ body {
   font-family: Lato, Arial, sans-serif;
   position: relative;
   font-weight: 800;
+  z-index: 2;
 }
 .stages__list .stage_current {
   background-color: #e75735;
