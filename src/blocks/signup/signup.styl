@@ -6,10 +6,10 @@
 @import '../toggle/toggle'
 
 .signup
-	width 80%
+	width 100%
 	height auto
 	text-align center
-	margin 2rem
+	margin 2rem 0
 
 	& .block-title
 		color yellowgreen
@@ -21,14 +21,21 @@
 		border-radius 0.5rem
 		padding 1rem 1rem
 		margin 2rem auto
+		@media screen and (max-width: 548px)
+			width 94%
+			margin 2rem auto
 
 	&__input
 		width 70%
 		margin 1rem 0
 		margin-left 10%
+		@media screen and (max-width: 480px)
+			margin 1rem
 
 	&__textarea
 		margin 1rem 10%
+		@media screen and (max-width: 480px)
+			margin 1rem
 
 	&__toggles
 		display flex

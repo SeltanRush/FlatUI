@@ -18,18 +18,19 @@
 		&:not(:placeholder-shown):required:invalid + .input__validate_invalid
 			opacity 1
 			margin-left 0.4375rem
+			display block
 
 		&:required:valid ~ .input__validate_valid
 			opacity 1
 			margin-left 0.4375rem
-
+			display block
 
 		&::placeholder
 			color _grey
 
 	&__validate
 		opacity 0
-		display block
+		display none
 		text-transform uppercase
 		width 4.375rem
 		height 1.75rem
@@ -38,7 +39,9 @@
 		position absolute
 		top 0
 		left 100%
-		margin-left 3.4375rem
+		margin-left 2.4375rem
+		@media screen and (max-width: 480px)
+			margin-left 1rem
 		font-size 0.625rem
 		font-family Lato, Arial, sans-serif
 		font-weight 800

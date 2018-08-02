@@ -1,15 +1,20 @@
 include ../../blocks/header/header
 include ../../blocks/footer/footer
+include ../../blocks/left-side/left-side
 
 doctype html
 html
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		title Sign up
+		title Profile
 	body
 		+header()
 		main.main
 			.wrapper
 				.main__container
+					.main__col.main__col_left
+						+left-side()
+					.main__col.main__col_right
+						+left-side()
 		+footer()

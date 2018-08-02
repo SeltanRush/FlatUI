@@ -1,14 +1,12 @@
 @import '../../global/global.styl'
 
-	
-
 .main
-	padding-top 6%
-	min-height 78%
-	height auto
+	padding-top 5.5rem
+	min-height 90%
 	width 100%
 	background-color _lightgrey
-	margin 0 auto
+	@media screen and (max-width: 740px)
+		padding-top 9rem
 
 	&__container
 		width 100%
@@ -18,7 +16,6 @@
 		align-items center
 		flex-direction column
 	
-
 @import '../../blocks/wrapper/wrapper'
 @import '../../blocks/header/header'
 @import '../../blocks/footer/footer'

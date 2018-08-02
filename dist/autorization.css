@@ -33,22 +33,11 @@
   font-weight: normal;
   font-style: normal;
 }
-html {
+html,
+body {
   font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   height: 100%;
-}
-@media screen and (max-width: 490px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 368px) {
-  html {
-    font-size: 10px;
-  }
-}
-body {
   margin: 0;
   height: 100%;
 }
@@ -61,10 +50,9 @@ body {
   outline: none;
 }
 .main {
-  height: 78%;
-  width: 100%;
+  padding-top: 5.5rem;
+  height: 90%;
   background-color: #e5e5e5;
-  margin: 0 auto;
 }
 .main__container {
   width: 100%;
@@ -72,14 +60,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .button {
   display: inline-block;
@@ -224,10 +210,12 @@ body {
 .input__field:not(:placeholder-shown):required:invalid + .input__validate_invalid {
   opacity: 1;
   margin-left: 0.4375rem;
+  display: block;
 }
 .input__field:required:valid ~ .input__validate_valid {
   opacity: 1;
   margin-left: 0.4375rem;
+  display: block;
 }
 .input__field::-webkit-input-placeholder {
   color: #9d9d9d;
@@ -243,7 +231,7 @@ body {
 }
 .input__validate {
   opacity: 0;
-  display: block;
+  display: none;
   text-transform: uppercase;
   width: 4.375rem;
   height: 1.75rem;
@@ -252,7 +240,7 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 3.4375rem;
+  margin-left: 2.4375rem;
   font-size: 0.625rem;
   font-family: Lato, Arial, sans-serif;
   font-weight: 800;
@@ -262,6 +250,11 @@ body {
   letter-spacing: 0.05rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .input__validate {
+    margin-left: 1rem;
+  }
 }
 .input__validate_valid {
   background-color: #4eb7a8;
@@ -341,6 +334,11 @@ body {
   border-radius: 0.5rem;
   padding: 1rem 1rem;
 }
+@media screen and (max-width: 375px) {
+  .signin {
+    width: 94%;
+  }
+}
 .signin .block-title {
   color: #9acd32;
 }
@@ -398,25 +396,21 @@ body {
   margin-right: 0.5rem;
 }
 .wrapper {
-  height: 100%;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .wrapper {
-  height: 100%;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .search {
   border-radius: 0.2rem;
   overflow: hidden;
   margin-bottom: 1rem;
   position: relative;
-  margin-top: 1.75rem;
+  margin: 0 auto;
 }
 .search__field {
   height: 1.75rem;
@@ -462,43 +456,66 @@ body {
   outline: none;
 }
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 4.5rem;
   line-height: 4.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 740px) {
+  .logo {
+    width: 28rem;
+    margin: 0.5rem auto;
+  }
+}
+@media screen and (max-width: 455px) {
+  .logo {
+    width: 4rem;
+  }
 }
 .logo__icon {
-  height: 4.5rem;
+  float: left;
+  height: 100%;
   width: 4rem;
   background: url(components/src/images/beard.svg) no-repeat;
 }
 .logo__text {
-  padding-left: 2rem;
+  width: 100%;
+  padding-left: 6rem;
   font-weight: bold;
   font-size: 3rem;
   text-transform: uppercase;
   color: #9acd32;
 }
+@media screen and (max-width: 455px) {
+  .logo__text {
+    display: none;
+  }
+}
 .header {
   background-color: #4eb7a8;
   width: 100%;
-  height: 12%;
+  height: 5.5rem;
   border-bottom: 0.3rem solid #9acd32;
   z-index: 3;
   position: fixed;
   top: 0;
 }
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 740px) {
   .header {
-    height: 20%;
+    height: 9rem;
   }
 }
 .header__search {
   width: 15rem;
 }
+@media screen and (max-width: 740px) {
+  .header__search {
+    margin: auto;
+  }
+}
 .header__container {
   width: 100%;
   height: 100%;
+  padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,6 +528,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 740px) {
+  .header__container {
+    display: block;
+  }
+}
 @media screen and (max-width: 705px) {
   .header__container {
     -webkit-box-pack: center;
@@ -519,11 +541,9 @@ body {
   }
 }
 .wrapper {
-  height: 100%;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .footer {
   width: 100%;

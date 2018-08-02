@@ -33,22 +33,11 @@
   font-weight: normal;
   font-style: normal;
 }
-html {
+html,
+body {
   font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   height: 100%;
-}
-@media screen and (max-width: 490px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 368px) {
-  html {
-    font-size: 10px;
-  }
-}
-body {
   margin: 0;
   height: 100%;
 }
@@ -489,10 +478,12 @@ body {
 .input__field:not(:placeholder-shown):required:invalid + .input__validate_invalid {
   opacity: 1;
   margin-left: 0.4375rem;
+  display: block;
 }
 .input__field:required:valid ~ .input__validate_valid {
   opacity: 1;
   margin-left: 0.4375rem;
+  display: block;
 }
 .input__field::-webkit-input-placeholder {
   color: #9d9d9d;
@@ -508,7 +499,7 @@ body {
 }
 .input__validate {
   opacity: 0;
-  display: block;
+  display: none;
   text-transform: uppercase;
   width: 4.375rem;
   height: 1.75rem;
@@ -517,7 +508,7 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 3.4375rem;
+  margin-left: 2.4375rem;
   font-size: 0.625rem;
   font-family: Lato, Arial, sans-serif;
   font-weight: 800;
@@ -527,6 +518,11 @@ body {
   letter-spacing: 0.05rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .input__validate {
+    margin-left: 1rem;
+  }
 }
 .input__validate_valid {
   background-color: #4eb7a8;
@@ -752,7 +748,7 @@ body {
   overflow: hidden;
   margin-bottom: 1rem;
   position: relative;
-  margin-top: 1.75rem;
+  margin: 0 auto;
 }
 .search__field {
   height: 1.75rem;

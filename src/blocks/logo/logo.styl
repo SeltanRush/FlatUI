@@ -1,14 +1,25 @@
 .logo
-	display flex
+	height 4.5rem
 	line-height 4.5rem
+	@media screen and (max-width: 740px)
+		width 28rem
+		margin 0.5rem auto
+	@media screen and (max-width: 455px)
+		width 4rem
+	text-align center
+		
 
 	&__icon
-		height 4.5rem
+		float left
+		height 100%
 		width 4rem
 		background url('../../images/beard.svg') no-repeat
 	
 	&__text
-		padding-left 2rem
+		@media screen and (max-width: 455px)
+			display none
+		width 100%
+		padding-left 6rem
 		font-weight bold
 		font-size 3rem
 		text-transform uppercase

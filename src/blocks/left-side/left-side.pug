@@ -1,0 +1,14 @@
+include ../event/event
+include ../news/news
+include ../avatar/avatar
+
+mixin left-side()
+	.left-side
+		.menu
+			.menu__avatar 
+				+avatar({src: './images/profile1.png'})
+			.menu__links
+				a.menu__link.menu__link_active profile
+				a.menu__link(href='news.html') news
+		.left-side__news
+		
